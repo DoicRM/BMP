@@ -44,11 +44,11 @@ int BitmapReader::readBitmapFile(const char* fileName)
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);
         std::cout << "Error occurred opening file." << std::endl;
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
-        exit(-1);
+        return -1;
     }
 
     printBitmapMetadata(file);
-    exit(0);
+    return 0;
 }
 
 void BitmapReader::printBitmapMetadata(FILE* file)
