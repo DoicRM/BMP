@@ -18,9 +18,12 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bitmapReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bitmapMetadata.hpp">
+    <ClInclude Include="bitmapReader.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
