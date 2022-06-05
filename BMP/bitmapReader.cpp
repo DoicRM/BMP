@@ -36,7 +36,7 @@ int BitmapReader::readBitmapFile(const char* fileName)
     if (file == nullptr)
     {
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);
-        std::cout << "Error occurred opening file." << std::endl;
+        std::cout << "Error occurred opening file: file does not exist." << std::endl;
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
         return -1;
     }
