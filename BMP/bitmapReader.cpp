@@ -33,19 +33,17 @@ int BitmapReader::readBitmapFile(const char* fileName)
     FILE* file;
     file = fopen(fileName, "rb");
 
-    if (file != nullptr)
-    {
-        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
-        std::cout << "Successfully opened file '" + std::string(fileName) + "'!" << std::endl;
-        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
-    }
-    else
+    if (file == nullptr)
     {
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);
         std::cout << "Error occurred opening file." << std::endl;
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
         return -1;
     }
+
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
+    std::cout << "Successfully opened file '" + std::string(fileName) + "'!" << std::endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 
     printBitmapMetadata(file);
     return 0;
