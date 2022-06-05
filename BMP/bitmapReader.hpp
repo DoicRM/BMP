@@ -10,4 +10,5 @@ public:
     static int readBitmapFile(const char* fileName);
 private:
     static void printBitmapMetadata(FILE* file);
+    static int createNegative(FILE* file);
 };
